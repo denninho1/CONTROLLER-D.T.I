@@ -1,0 +1,38 @@
+section {
+    width: 100%;
+    padding: 0 40px;
+}
+
+.header_pending {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.header_pending h1 {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: #4e4e4e;
+}
+
+.header_pending .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px
+}
+
+.header_pending .right button {
+    font-size: 1.4rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #313131;
+}
+
+.header_pending .btn_newtask {
+    background-color: #76ec5e;
+}

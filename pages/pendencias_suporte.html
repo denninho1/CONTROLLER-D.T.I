@@ -3,33 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8d9aafe57f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sup_pending.css">
     <title>Pendencias Suporte Máquinas - LASER ELETRO</title>
 </head>
 <body>
+    <header class="header">
+        <div class="left"><a href="#">Controller D.T.I</a></div>
+        <div class="right"><i class="fa-solid fa-user"></i></div>
+    </header>
+    <form action="post" class="create_task">
+        <div class="name_info">
+            <span>Loja:</span>
+        </div>
+    </form>
     <section class="">
         <div class="header_pending">
             <div class="left">
                 <h1 id="title">Lista de pendencias</h1>
             </div>
             <div class="right btns">
-                <button>Novo</button>
-                <button>Filtrar por</button>
+                <button class="btn_newtask">Novo <i class="fa-solid fa-circle-plus"></i></button>
+                <button class="btn_filtertask">Filtrar por <i class="fa-solid fa-caret-down"></i></button>
             </div>
-            <span id="bar"></span>
         </div>
         <ul class="list_pending">
-            <li class="box_pending">
+            <li class="box_pend">
                 <div class="left">
                     <h2 class="loja">LOJA 89 | Recife - PE | DDD 81</h2>
                     <div class="pending">
-                        <span>01 Teclado</span>
-                        <span>02 Mouse</span>
+                        <span>01 Teclado, 01 mouse</span>
+                        <span>Data: 01/01/2001</span>
                     </div>
                 </div>
                 <div class="right">
                     <button><i class="fa-solid fa-file-pen"></i></button>
                     <button><i class="fa-regular fa-circle-check"></i></button>
                     <button><i class="fa-solid fa-trash-can"></i></button>
+                    <button><i class="fa-solid fa-link"></i></button>
                 </div>
             </li>
         </ul>
