@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  list-style: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+footer, footer a {
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+footer, footer a span {
+    color: #f8df00;
+}
+
+body {
+    position: relative;
+    padding-top: 60px;
+}
+
+/* Header fixo */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;         
+
+    padding: 0 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+
+/* Lado esquerdo */
+.header .left a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Lado direito */
+.header .right {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Área principal */
+.main {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container das boxes */
+.boxs_navs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Estilo base das boxes */
+.box {
+    width: 220px;
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Ícones */
+.box i {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+/* Texto */
+.box span {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+}
+
+/* Hover padrão */
+.box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Cores individuais */
+.box_monitor {
+    border-top: 5px solid #007bff;
+}
+
+.box_monitor i {
+    color: #007bff;
+}
+
+.box_pending {
+    border-top: 5px solid #ffc107;
+}
+
+.box_pending i {
+    color: #ffc107;
+}
+
+.box_info {
+    border-top: 5px solid #28a745;
+}
+
+.box_info i {
+    color: #28a745;
+}
+
+.box_infra {
+    border-top: 5px solid #dc3545;
+}
+
+.box_infra i {
+    color: #dc3545;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .box {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
