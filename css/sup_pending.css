@@ -73,15 +73,16 @@ section {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .list_pending .box_pend {
     display: flex;
     border: 1px solid #000;
-    padding: 10px;
-    cursor: pointer;
-    background-color: #ffe629;
+    padding: 10px 15px;
+    background-color: #fffb05;
     gap: 20px;
+    max-width: 300px;
 }
 
 .list_pending .box_pend .info_loja #name_loja {
@@ -90,7 +91,7 @@ section {
 
 .list_pending .box_pend .info_loja #more_info {
     font-size: 1.3rem;
-    color: #3b3b3b;
+    color: #0000009b;
 }
 
 .pend_more_info {
@@ -101,15 +102,22 @@ section {
 
 .pend_more_info #pend_name {
     font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .pend_more_info #pend_info { 
     font-size: 1.3rem;
+    margin-top: -2px;
 }
 
-.pend_left #pend_date {
-    font-size: 1.2rem;
+.pend_more_info #pend_date {
+    font-size: 1.15rem;
+    color: #00000099;
 } 
+
+.pend_more_info #pend_link {
+    font-size: 1.3rem;
+}
 
 .pend_right {
     display: flex;
@@ -118,6 +126,9 @@ section {
 }
 
 .pend_right .pend_btn {
-    background-color: #c7c7c7;
-    padding: 5px;
+    background-color: #ebebeb;
+    font-size: 1.5rem;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
 }
