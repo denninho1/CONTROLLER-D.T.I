@@ -71,8 +71,61 @@ section {
     border-radius: 4px;
     width: 700px;
     max-width: 700px;
+    z-index: 1000;
 }
 
+.create_task_wrapper div {
+    width: 100%;
+}
+
+.create_task_wrapper .task_title {
+    font-size: 1.8rem;
+    margin-bottom: 2px;
+}
+
+.create_task_wrapper .task_select {
+    cursor: pointer;
+    border: 1px solid #000;
+    padding: 5px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.task_info, .task_email {
+    border: 1px solid #000;
+    padding: 5px;
+    width: 100%;
+    resize: none;
+}
+
+.task_date {
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+.btns_formTask {
+    display: flex;
+    gap:10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn_formTask {
+    width: 50%;
+    cursor: pointer;
+    padding: 15px 10px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 2);
+}
+
+.btn_createNewTask {
+    background-color: #76ec5e;
+}
+
+.btn_createNewTask:hover, .btn_newtask:hover {
+    background-color: #58b146;
+}
+
+/* Style Lista de Pendencias */
 .list_pending {
     width: 100%;
     margin-top: 10px;
