@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="./css/login.css">
     <title>Controller T.I - LASER ELETRO</title>
 </head>
-<body>
+<body style="padding: 0;">
     <section class="background">
         <div class="box_login">
             <header class="title_login">CONTROLLER D.T.I</header>
             <span id="text_1">Realize seu Login</span>
-            <form class="box_inputs" action="main.html">
+            <form class="box_inputs system_login" id="system_login">
                 <fieldset class="login_user">
                     <input type="text" class="user" id="user" autocomplete="off" placeholder="" required>
                     <label for="user">Login</label>
@@ -22,7 +22,7 @@
                     <label for="pass">Senha</label>
                     <span id="hide_pass">MOSTRAR</span>
                 </fieldset>
-
+                <span id="msg_error"></span>
                 <button type="submit" class="btn_login">ENTRAR</button>
             </form>
         </div>
@@ -30,6 +30,7 @@
 
     <footer><a href="https://www.instagram.com/denninho1/">Criador por <span>Dennis Cesar</span></a></footer>
 
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/login.js" defer></script>
 </body>
 </html>
