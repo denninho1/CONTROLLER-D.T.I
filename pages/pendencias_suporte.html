@@ -16,26 +16,26 @@
     <form class="create_task closed" id="formTask">
         <div class="create_task_wrapper">
             <h1 style="font-size: 2.8rem; margin-bottom: 5px;">Crie a pendência</h1>
-            <div class="name_info">
+            <div class="name_info task_content">
                 <span class="task_title">Loja:</span>
                 <select id="taskLoja" class="task_select">
                     <option value="">Selecione uma loja</option>
                     <option value="LOJA 01">LOJA 01</option>
                 </select>
             </div>
-            <div class="pending_info">
+            <div class="pending_info task_content">
                 <span class="task_title">Pendente:</span>
                 <textarea id="taskPendencia" class="task_info" placeholder="Digite os materiais pendentes" required></textarea>
             </div>
-            <div class="email">
+            <div class="email task_content">
                 <span class="task_title">Email:</span>
                 <input type="text" id="taskEmail" class="task_email" placeholder="Coloque o e-mail vinculado à esta pendência" required>
             </div>
-            <div class="data">
+            <div class="data task_content">
                 <span class="task_title">Data:</span>
                 <input type="date" id="taskDate" class="task_date">
             </div>
-            <div class="status">
+            <div class="status ">
                 <span class="task_title">Status:</span>
                 <select id="taskStatus" class="task_select">
                     <option value="">Selecione o status</option>
@@ -63,7 +63,7 @@
             </div>
         </div>
         <ul class="list_pending" id="listPendencias">
-            <li class="box_pend">
+            <!-- <li class="box_pend">
                 <div class="box_pend_info">
                     <div class="info_loja">
                         <h2 class="name_loja">LOJA 89</h2>
@@ -83,7 +83,7 @@
                     <button class="pend_btn"><i class="fa-regular fa-circle-check"></i></button>
                     <button class="pend_btn deleteTask"><i class="fa-solid fa-trash-can"></i></button>
                 </div>
-            </li>
+            </li> -->
         </ul>
     </section>
     <script src="../js/tasks.js"></script>

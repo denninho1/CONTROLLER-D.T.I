@@ -75,6 +75,7 @@ btnCreateTask.addEventListener('click', function (e) {
     })
 
     listPendencias.appendChild(li)
+    toggleFormCreateTask ();
 })
 
 
