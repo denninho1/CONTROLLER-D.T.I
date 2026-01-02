@@ -18,17 +18,14 @@
             <h1 style="font-size: 2.8rem; margin-bottom: 5px;">Crie a pendência</h1>
             <div class="name_info">
                 <span class="task_title">Loja:</span>
-                <select name="" id="taskLoja" class="task_select">
+                <select id="taskLoja" class="task_select">
                     <option value="">Selecione uma loja</option>
                     <option value="LOJA 01">LOJA 01</option>
-                    <option value="">LOJA 04</option>
-                    <option value="">LOJA 06</option>
-                    <option value="">LOJA 07</option>
                 </select>
             </div>
             <div class="pending_info">
                 <span class="task_title">Pendente:</span>
-                <textarea name="" id="taskPendencia" class="task_info" placeholder="Digite os materiais pendentes" required></textarea>
+                <textarea id="taskPendencia" class="task_info" placeholder="Digite os materiais pendentes" required></textarea>
             </div>
             <div class="email">
                 <span class="task_title">Email:</span>
@@ -40,7 +37,7 @@
             </div>
             <div class="status">
                 <span class="task_title">Status:</span>
-                <select name="" id="taskStatus" class="task_select">
+                <select id="taskStatus" class="task_select">
                     <option value="">Selecione o status</option>
                     <option value="Aguardando a filial enviar">Aguardando a filial enviar</option>
                     <option value="Aguardando o reparo">Aguardando o reparo</option>
@@ -69,21 +66,22 @@
             <li class="box_pend">
                 <div class="box_pend_info">
                     <div class="info_loja">
-                        <h2 id="name_loja">LOJA 89</h2>
-                        <span id="more_info">Recife - PE | DDD 81</span>
+                        <h2 class="name_loja">LOJA 89</h2>
+                        <span class="more_info">Recife - PE | DDD 81</span>
                     </div>
                     <div class="pend_more_info">
-                        <span id="pend_name">Pendente:</span>
-                        <span id="pend_info">01 Teclado, 03 estabilizadores, 02 monitor, 02 cpu, 01 mouse</span>
-                        <span id="pend_date">Data: 01/01/2001</span>
-                        <a id="pend_link"><i class="fa-solid fa-link"></i> e-mail</a>
+                        <span class="pend_name">Pendente:</span>
+                        <span class="pend_info">01 Teclado, 03 estabilizadores, 02 monitor, 02 cpu, 01 mouse</span>
+                        <span class="pend_date">Data: 01/01/2001</span>
+                        <span class="pend_status">Aguardando filial enviar</span>
+                        <a  class="pend_link"><i class="fa-solid fa-link"></i> e-mail</a>
                     </div>
                 </div>
 
                 <div class="pend_right">
                     <button class="pend_btn"><i class="fa-solid fa-file-pen"></i></button>
                     <button class="pend_btn"><i class="fa-regular fa-circle-check"></i></button>
-                    <button class="pend_btn"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="pend_btn deleteTask"><i class="fa-solid fa-trash-can"></i></button>
                 </div>
             </li>
         </ul>

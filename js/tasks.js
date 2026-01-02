@@ -49,30 +49,23 @@ btnCreateTask.addEventListener('click', function (e) {
     li.innerHTML = `
         <div class="box_pend_info">
             <div class="info_loja">
-                <h2>${loja}</h2>
-                <span>${status || 'Sem status'}</span>
+                <h2 class="name_loja">${loja}</h2>
+                <span class="more_info">Recife - PE | DDD 81</span>
             </div>
 
             <div class="pend_more_info">
-                <span><strong>Pendente:</strong></span>
-                <span>${pendencia}</span>
-                <span>Data: ${dataFormatada}</span>
-                <a href="mailto:${email}">
-                    <i class="fa-solid fa-link"></i> ${email}
-                </a>
+                <span class="pend_name">Pendente:</span>
+                <span class="pend_info">${pendencia}</span>
+                <span class="pend_date">Data: ${dataFormatada}</span>
+                <span class="pend_status">${status}</span>
+                <a href="${email}" target="_blank" class="pend_link"><i class="fa-solid fa-link"></i> e-mail</a>
             </div>
         </div>
 
         <div class="pend_right">
-            <button class="pend_btn edit">
-                <i class="fa-solid fa-file-pen"></i>
-            </button>
-            <button class="pend_btn done">
-                <i class="fa-regular fa-circle-check"></i>
-            </button>
-            <button class="pend_btn delete">
-                <i class="fa-solid fa-trash-can"></i>
-            </button>
+            <button class="pend_btn edit"><i class="fa-solid fa-file-pen"></i></button>
+            <button class="pend_btn done"><i class="fa-regular fa-circle-check"></i></button>
+            <button class="pend_btn delete"><i class="fa-solid fa-trash-can"></i></button>
         </div>
     `
 
@@ -82,8 +75,6 @@ btnCreateTask.addEventListener('click', function (e) {
     })
 
     listPendencias.appendChild(li)
-
-    form.reset()
 })
 
 

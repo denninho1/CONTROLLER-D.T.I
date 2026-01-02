@@ -142,13 +142,14 @@ section {
     background-color: #fffb05;
     gap: 20px;
     max-width: 300px;
+    height: 100%;
 }
 
-.list_pending .box_pend .info_loja #name_loja {
+.list_pending .box_pend .info_loja .name_loja {
     font-size: 1.8rem;
 }
 
-.list_pending .box_pend .info_loja #more_info {
+.list_pending .box_pend .info_loja .more_info {
     font-size: 1.3rem;
     color: #0000009b;
 }
@@ -159,22 +160,22 @@ section {
     gap: 5px;
 }
 
-.pend_more_info #pend_name {
+.pend_more_info .pend_name {
     font-size: 1.2rem;
     font-weight: 500;
 }
 
-.pend_more_info #pend_info { 
+.pend_more_info .pend_info { 
     font-size: 1.3rem;
     margin-top: -2px;
 }
 
-.pend_more_info #pend_date {
+.pend_more_info .pend_date {
     font-size: 1.15rem;
     color: #00000099;
 } 
 
-.pend_more_info #pend_link {
+.pend_more_info .pend_link {
     font-size: 1.3rem;
 }
 
