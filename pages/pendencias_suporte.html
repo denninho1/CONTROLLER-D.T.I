@@ -13,15 +13,14 @@
         <div class="left"><a href="#">Controller D.T.I</a></div>
         <div class="right"><i class="fa-solid fa-user"></i></div>
     </header>
-    <form action="#" class="create_task closed">
-        
+    <form class="create_task closed" id="formTask">
         <div class="create_task_wrapper">
-            <h1 style="font-size: 2.8rem; margin-bottom: 5px;">Criando pendência...</h1>
+            <h1 style="font-size: 2.8rem; margin-bottom: 5px;">Crie a pendência</h1>
             <div class="name_info">
                 <span class="task_title">Loja:</span>
-                <select name="" id="" class="task_select"">
+                <select name="" id="taskLoja" class="task_select">
                     <option value="">Selecione uma loja</option>
-                    <option value="">LOJA 01</option>
+                    <option value="LOJA 01">LOJA 01</option>
                     <option value="">LOJA 04</option>
                     <option value="">LOJA 06</option>
                     <option value="">LOJA 07</option>
@@ -29,29 +28,29 @@
             </div>
             <div class="pending_info">
                 <span class="task_title">Pendente:</span>
-                <textarea name="" id="" class="task_info" placeholder="Digite os materiais pendentes" required></textarea>
+                <textarea name="" id="taskPendencia" class="task_info" placeholder="Digite os materiais pendentes" required></textarea>
             </div>
             <div class="email">
                 <span class="task_title">Email:</span>
-                <input type="text" class="task_email" placeholder="Coloque o e-mail vinculado à esta pendência" required>
+                <input type="text" id="taskEmail" class="task_email" placeholder="Coloque o e-mail vinculado à esta pendência" required>
             </div>
             <div class="data">
                 <span class="task_title">Data:</span>
-                <input type="date" class="task_date">
+                <input type="date" id="taskDate" class="task_date">
             </div>
             <div class="status">
                 <span class="task_title">Status:</span>
-                <select name="" id="" class="task_select">
+                <select name="" id="taskStatus" class="task_select">
                     <option value="">Selecione o status</option>
-                    <option value="">Aguardando a filial enviar</option>
-                    <option value="">Aguardando o reparo</option>
-                    <option value="">Em reparo na bancada</option>
-                    <option value="">Pronto para envio</option>
+                    <option value="Aguardando a filial enviar">Aguardando a filial enviar</option>
+                    <option value="Aguardando o reparo">Aguardando o reparo</option>
+                    <option value="Em reparo na bancada">Em reparo na bancada</option>
+                    <option value="Pronto para envio">Pronto para envio</option>
                 </select>
             </div>
 
             <div class="btns_formTask">
-                <button class="btn_createNewTask btn_formTask transtionAll3Ease">Cadastrar</button>
+                <button class="btn_createNewTask btn_formTask transtionAll3Ease" id="btn_createNewTask">Cadastrar</button>
                 <button class="closed_form_task btn_formTask transtionAll3Ease">Cancelar</button>
             </div>
         </div>
@@ -66,7 +65,7 @@
                 <button class="btn_filtertask transtionAll3Ease">Filtrar por <i class="fa-solid fa-caret-down"></i></button>
             </div>
         </div>
-        <ul class="list_pending">
+        <ul class="list_pending" id="listPendencias">
             <li class="box_pend">
                 <div class="box_pend_info">
                     <div class="info_loja">
