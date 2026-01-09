@@ -11,6 +11,7 @@ function toggleFormCreateTask () {
 
 btnOpenCreateTask.addEventListener('click', () => {
     toggleFormCreateTask();
+    switchStatus();
 });
 
 btnClosedCreateTask.addEventListener('click', () => {
@@ -24,15 +25,21 @@ const listPendencias = document.getElementById('listPendencias')
 
 btnCreateTask.addEventListener('click', function (e) {
     e.preventDefault()
+    createNewTask();
+})
 
+
+function createNewTask () {
     // Captura dos valores
     const loja = document.getElementById('taskLoja').value
     const pendencia = document.getElementById('taskPendencia').value
     const email = document.getElementById('taskEmail').value
     const data = document.getElementById('taskDate').value
-    const status = document.getElementById('taskStatus').value
+    const status = document.getElementById('taskStatus');
+    const statusValue = status.value;
+    const statusText = status.options[status.selectedIndex].text;
 
-    if (!loja || !pendencia || !email || !status) {
+    if (!loja || !pendencia || !email || !statusValue) {
         alert('Preencha os campos obrigatórios!')
         return
     }
@@ -57,7 +64,7 @@ btnCreateTask.addEventListener('click', function (e) {
                 <span class="pend_name">Pendente:</span>
                 <span class="pend_info">${pendencia}</span>
                 <span class="pend_date">Data: ${dataFormatada}</span>
-                <span class="pend_status">${status}</span>
+                <span class="pend_status">${statusText}</span>
                 <a href="${email}" target="_blank" class="pend_link"><i class="fa-solid fa-link"></i> e-mail</a>
             </div>
         </div>
@@ -76,6 +83,20 @@ btnCreateTask.addEventListener('click', function (e) {
 
     listPendencias.appendChild(li)
     toggleFormCreateTask ();
-})
+    switchStatus(li, statusValue)
+}
 
+
+// Mudar cor da box de acordo com status
+function switchStatus (box, selectValue) {
+    if (selectValue === 'status01') {
+        box.style.backgroundColor = '#d13535ff';
+    } else if (selectValue === 'status02') {
+        box.style.backgroundColor = '#ffae00ff';
+    } else if (selectValue === 'status03') {
+        box.style.backgroundColor = '#fffb00ff';
+    } else if (selectValue === 'status04') {
+        box.style.backgroundColor = '#008cffff';
+    }
+};
 
