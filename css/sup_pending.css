@@ -136,10 +136,11 @@ section {
     display: flex;
     border: 1px solid #000;
     padding: 10px 15px;
-    background-color: #fffb05;
+    background-color: #c0c0c0;
     gap: 20px;
     max-width: 300px;
     justify-content: space-between;
+    border-radius: 5px;
 }
 
 .list_pending .box_pend .info_loja .name_loja {

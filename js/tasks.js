@@ -11,12 +11,10 @@ function toggleFormCreateTask () {
 
 btnOpenCreateTask.addEventListener('click', () => {
     toggleFormCreateTask();
-    switchStatus();
 });
 
 btnClosedCreateTask.addEventListener('click', () => {
     toggleFormCreateTask();
-    cleanTask();
 });
 
 // Variaveis para criar nova tarefa e <ul>
@@ -27,19 +25,18 @@ const listPendencias = document.getElementById('listPendencias');
 btnCreateTask.addEventListener('click', function (e) {
     e.preventDefault()
     createNewTask();
-    cleanTask();
 })
 
 // criar pendencia
 function createNewTask () {
     // Captura dos valores
-    let loja = document.getElementById('taskLoja').value;
-    let pendencia = document.getElementById('taskPendencia').value;
-    let email = document.getElementById('taskEmail').value;
-    let data = document.getElementById('taskDate').value;
-    let status = document.getElementById('taskStatus');
-    let statusValue = status.value;
-    let statusText = status.options[status.selectedIndex].text;
+    const loja = document.getElementById('taskLoja').value;
+    const pendencia = document.getElementById('taskPendencia').value;
+    const email = document.getElementById('taskEmail').value;
+    const data = document.getElementById('taskDate').value;
+    const status = document.getElementById('taskStatus');
+    const statusValue = status.value;
+    const statusText = status.options[status.selectedIndex].text;
 
     if (!loja || !pendencia || !email || !statusValue) {
         alert('Preencha os campos obrigatórios!');
@@ -84,24 +81,23 @@ function createNewTask () {
     })
 
     listPendencias.appendChild(li);
-    toggleFormCreateTask ();
-    switchStatus(li, statusValue);
+    toggleFormCreateTask();
+    switchStatus(li, status);
 }
 
 
 // Mudar cor da box de acordo com status
-function switchStatus (box, selectValue) {
-    if (selectValue[1]) {
+function switchStatus (box, status) {   
+    const selectOrder = status.options[status.selectedIndex].value 
+    
+    if (selectOrder[1]) {
         box.style.backgroundColor = '#d13535ff';
-    } else if (selectValue[2]) {
+    } else if (selectOrder[2]) {
         box.style.backgroundColor = '#ffae00ff';
-    } else if (selectValue[3]) {
+    } else if (selectOrder[3]) {
         box.style.backgroundColor = '#fffb00ff';
-    } else if (selectValue[4]) {
+    } else if (selectOrder[4]) {
         box.style.backgroundColor = '#008cffff';
-    } else {
-        alert('erro');
-        return
     }
 };
 
