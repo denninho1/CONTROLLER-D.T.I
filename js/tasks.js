@@ -88,15 +88,16 @@ function createNewTask () {
 
 // Mudar cor da box de acordo com status
 function switchStatus (box, status) {   
-    const selectOrder = status.options[status.selectedIndex].value 
+    const selectOrder = status.selectedIndex
+    console.log(status.selectedIndex)
     
-    if (selectOrder[1]) {
+    if (selectOrder === 1) {
         box.style.backgroundColor = '#d13535ff';
-    } else if (selectOrder[2]) {
+    } else if (selectOrder === 2) {
         box.style.backgroundColor = '#ffae00ff';
-    } else if (selectOrder[3]) {
+    } else if (selectOrder === 3) {
         box.style.backgroundColor = '#fffb00ff';
-    } else if (selectOrder[4]) {
+    } else if (selectOrder === 4) {
         box.style.backgroundColor = '#008cffff';
     }
 };
