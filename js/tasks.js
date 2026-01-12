@@ -15,6 +15,7 @@ btnOpenCreateTask.addEventListener('click', () => {
 
 btnClosedCreateTask.addEventListener('click', () => {
     toggleFormCreateTask();
+    cleanTask();
 });
 
 // Variaveis para criar nova tarefa e <ul>
@@ -25,6 +26,7 @@ const listPendencias = document.getElementById('listPendencias');
 btnCreateTask.addEventListener('click', function (e) {
     e.preventDefault()
     createNewTask();
+    cleanTask();
 })
 
 // criar pendencia
