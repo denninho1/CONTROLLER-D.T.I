@@ -15,34 +15,42 @@ mostrarBtn.addEventListener("click", () => {
     }
 });
 
-
-// usuario e senha temporarios
-const userTemp = 'laser'
-const passTemp = '123456'
-
 // Variavel do formulario
 const formLogin = document.querySelector('#system_login');
 
 // Evento de submit para realizer o login
-formLogin.addEventListener('submit', function (e) {
+formLogin.addEventListener("submit", async function (e) {
     e.preventDefault();
-    login();
-})
- 
-//Function para validar o login
-function login() {
-    // valor dos input login e senha
-    const userValue = document.querySelector('#user').value;
-    const passValue = document.querySelector('#pass').value;
 
-    if (userValue != userTemp && passValue != passTemp) {
+    const user = document.querySelector('#user').value;
+    const pass = document.querySelector('#pass').value;
+
+    const res = await fetch("http://localhost:3000/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ usuario: user, pass: pass })
+    });
+
+    const text = await res.text();
+    console.log("STATUS:", res.status);
+    console.log("RESPOSTA:", text);
+
+    if (!res.ok) {
+        document.getElementById("msg_error").innerText = text;
+        return;
+    }
+
+    const data = JSON.parse(text);
+    localStorage.setItem("token", data.token);
+    window.location.href = "main.html";
+});
+
+
+/* if (userValue != userTemp && passValue != passTemp) {
         const msgError = document.getElementById('msg_error');
         msgError.innerText = 'Usuário não cadastrado';
         msgError.classList.remove('notify');
         void msgError.offsetWidth;
         msgError.classList.add('notify');
         return
-    } 
-    window.location.href = 'main.html';
-}
-
+    }  */

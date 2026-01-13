@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de controle de usuarios</title>
+</head>
+<body>
+    <h2>Painel de Usuários</h2>
+<table id="tabela"></table>
+
+<script>
+const token = localStorage.getItem("token");
+
+fetch("http://localhost:3000/auth/users", {
+    headers: {
+        "Authorization": "Bearer " + token
+    }
+})
+.then(res => res.json())
+.then(data => {
+    const tabela = document.getElementById("tabela");
+    tabela.innerHTML = `
+        <tr>
+            <th>Usuário</th>
+            <th>Cargo</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </tr>
+    `;
+
+    data.forEach(u => {
+        tabela.innerHTML += `
+            <tr>
+                <td>${u.usuario}</td>
+                <td>${u.role}</td>
+                <td>${u.status}</td>
+                <td>
+                    <button onclick="bloquear(${u.id}, '${u.status}')">Bloquear</button>
+                    <button onclick="deletar(${u.id})">Excluir</button>
+                </td>
+            </tr>
+        `;
+    });
+});
+
+function bloquear(id, status) {
+    fetch(`http://localhost:3000/auth/users/${id}/status`, {
+        method: "PUT",
+        headers: {
+            "Authorization": "Bearer " + token,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            status: status === "ativo" ? "bloqueado" : "ativo"
+        })
+    }).then(() => location.reload());
+}
+
+function deletar(id) {
+    fetch(`http://localhost:3000/auth/users/${id}`, {
+        method: "DELETE",
+        headers: {
+            "Authorization": "Bearer " + token
+        }
+    }).then(() => location.reload());
+}
+</script>
+
+</body>
+</html>
