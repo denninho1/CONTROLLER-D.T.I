@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt');
-const db - require('./db');
+const db = require('./db');
 
 async function create() {
     const password = await bcrypt.hash('123456', 10)

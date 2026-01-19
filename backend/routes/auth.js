@@ -98,8 +98,4 @@ router.delete('/users/:id', auth('admin'), (req, res) => {
     )
 })
 
-
-
-
-
 module.exports = router;

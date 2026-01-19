@@ -74,6 +74,54 @@ body {
     cursor: pointer;
 }
 
+.navbar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+.nav_list li {
+    height: 100%;
+}
+
+.nav_list li a {
+    transition: .3s ease all;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    font-size: 1.5rem;
+    height: 100%;
+    color: #000;
+}
+
+.nav_list li a:hover, .logoff:hover {
+    background-color: #ddd;
+}
+
+.logoff {
+    font-size: 1.7rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: -webkit-fill-available;
+}
+
+
 /* Área principal */
 .main {
     padding: 40px 20px;
