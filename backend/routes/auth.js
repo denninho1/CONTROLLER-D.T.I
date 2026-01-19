@@ -68,6 +68,12 @@ router.post('/users', auth('admin'), async (req, res) => {
     )
 });
 
+//LOGOFF
+
+router.post('/logout', auth(), (req, res) => {
+    res.json({message: 'Logout feito com sucesso'});
+})
+
 // BLOQUEAR / ATIVAR
 router.put('/users/:id/status', auth('admin'), (req, res) => {
     const {status} = req.body;

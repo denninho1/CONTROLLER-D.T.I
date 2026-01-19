@@ -46,11 +46,3 @@ formLogin.addEventListener("submit", async function (e) {
 });
 
 
-/* if (userValue != userTemp && passValue != passTemp) {
-        const msgError = document.getElementById('msg_error');
-        msgError.innerText = 'Usuário não cadastrado';
-        msgError.classList.remove('notify');
-        void msgError.offsetWidth;
-        msgError.classList.add('notify');
-        return
-    }  */
