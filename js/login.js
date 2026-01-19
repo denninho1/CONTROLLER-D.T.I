@@ -32,8 +32,8 @@ formLogin.addEventListener("submit", async function (e) {
     });
 
     const text = await res.text();
-    console.log("STATUS:", res.status);
-    console.log("RESPOSTA:", text);
+    /* console.log("STATUS:", res.status);
+    console.log("RESPOSTA:", text); */
 
     if (!res.ok) {
         document.getElementById("msg_error").innerText = text;
