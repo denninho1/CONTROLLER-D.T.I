@@ -2,14 +2,17 @@ const bcrypt = require('bcrypt');
 const db = require('./db');
 
 async function create() {
-    const password = await bcrypt.hash('123456', 10)
+    const senha = await bcrypt.hash('123456', 10)
 
     db.query(
-        'INSER INTO usuarios (usuario, pass) VALUES (?, ?)'
-        ['laser', password]
+        "INSERT INTO usuarios (usuario, pass, role) VALUES (?, ?, ?)",
+        ["reginaldo", senha, "admin"],
+        () => {
+            console.log("Usuário criado");
+            process.exit();
+        }
     );
 
-    console.log('Usuário criado');
 }
 
 create();
