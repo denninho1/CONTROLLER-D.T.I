@@ -69,14 +69,21 @@ body {
 
 /* Lado direito */
 .header .right {
-    font-size: 20px;
+    font-size: 1.5rem;
     color: #333;
     cursor: pointer;
 }
 
-.navbar {
-    position: fixed;
-    top: 60px;
+.header .right #user_logged {
+    margin-left: 10px;
+    font-weight: 400;
+    text-transform:uppercase;
+    color: #353535;
+}
+
+.header .navbar {
+    position: absolute;
+    top: -120px;
     left: 0;
     background-color: #fff;
     width: 100%;
@@ -84,6 +91,12 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ddd;
+    transition: .6s all ease;
+    z-index: -1;
+}
+
+.navbar.active {
+    top: 60px;
 }
 
 .nav_list {

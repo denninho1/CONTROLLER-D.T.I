@@ -25,11 +25,21 @@ router.post("/login", (req, res) => {
             if (!valid)
                 return res.status(401).json({ error: "Senha incorreta" });
 
-            const token = jwt.sign(
+            /* const token = jwt.sign(
                 { id: user.id, role: user.role },
                 SECRET,
                 { expiresIn: "2h" }
-            );
+            ); */
+
+            const token = jwt.sign(
+                {
+                    id: user.id,
+                    role: user.role,
+                    usuario: user.usuario
+                },
+                SECRET,
+                {expiresIn: "2h"}
+            )
 
             res.json({ token });
         }
