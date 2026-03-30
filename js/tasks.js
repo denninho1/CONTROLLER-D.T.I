@@ -15,6 +15,7 @@ btnOpenCreateTask.addEventListener('click', () => {
 
 btnClosedCreateTask.addEventListener('click', () => {
     toggleFormCreateTask();
+    cleanTask();
 });
 
 // Variaveis para criar nova tarefa e <ul>

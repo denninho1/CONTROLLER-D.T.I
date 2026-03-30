@@ -79,6 +79,7 @@ body {
     padding: 40px 20px;
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
 
 /* Container das boxes */
@@ -101,7 +102,6 @@ body {
     width: 50%;
     height: 1px;
 }
-
 
 .boxs_navs {
     display: flex;

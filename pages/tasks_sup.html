@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8d9aafe57f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/sup_pending.css">
+    <link rel="stylesheet" href="../css/tasks.css">
     <title>Pendencias Suporte Máquinas - LASER ELETRO</title>
 </head>
 <body>
@@ -36,7 +36,7 @@
                 <input type="date" id="taskDate" class="task_date">
             </div>
             <div class="status ">
-                <span class="task_title">Status:</span>
+                <span class="task_title">Status(Opcional):</span>
                 <select id="taskStatus" class="task_select">
                     <option value="status00">Selecione o status</option>
                     <option value="status01">Aguardando a filial enviar</option>
@@ -55,7 +55,7 @@
     <section class="">
         <div class="header_pending">
             <div class="left">
-                <h1 id="title">Lista de pendencias</h1>
+                <h1 id="title">Lista de pendencias - Suporte Máquinas</h1>
             </div>
             <div class="right btns">
                 <button class="btn_newtask transtionAll3Ease">Novo <i class="fa-solid fa-circle-plus"></i></button>
@@ -67,7 +67,6 @@
                 <div class="box_pend_info">
                     <div class="info_loja">
                         <h2 class="name_loja">LOJA 89</h2>
-                        <span class="more_info">Recife - PE | DDD 81</span>
                     </div>
                     <div class="pend_more_info">
                         <span class="pend_name">Pendente:</span>
@@ -84,6 +83,29 @@
                     <button class="pend_btn deleteTask"><i class="fa-solid fa-trash-can"></i></button>
                 </div>
             </li> -->
+        </ul>
+
+        <ul class="task_list task_list_sup" id="listPendencias">
+            <li class="task_box_wrapper">
+                <div class="box_pend_info task_box_content">
+                    <div class="info_loja task_box_header">
+                        <h2 class="task_box_title">Loja 89</h2>
+                    </div>
+                    <div class="task_box_infos">
+                        <span class="task_pend">Pendente:</span>
+                        <span class="task_info">Adicionar nova camera no box 03 </span>
+                        <span class="task_status">Aguardando Filial Enviar</span>
+                        <span class="task_date">Data: 01/01/2001</span>
+                        <a class="task_email"><i class="fa-solid fa-link"></i> e-mail</a>
+                    </div>
+                </div>
+
+                <div class="task_box_actions">
+                    <button class="task_box_btn editTaskInfra"><i class="fa-solid fa-file-pen"></i></button>
+                    <button class="task_box_btn completedTaskInfra"><i class="fa-regular fa-circle-check"></i></button>
+                    <button class="task_box_btn deleteTaskInfra"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </li>
         </ul>
     </section>
     <script src="../js/tasks.js"></script>
