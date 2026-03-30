@@ -1,2 +1,2 @@
 # CONTROLLER-D.T.I
-Projeto de controle de serviços do departamento de t.i que eu trabalho.
+Projeto para controle de tarefas e monitoramento de T.I para empresa que trabalho.
