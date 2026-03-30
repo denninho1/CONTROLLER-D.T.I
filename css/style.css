@@ -99,6 +99,7 @@ body {
 .boxs_wrapper #boxs_bar {
     margin-top: 10px;
     background-color: #d8d8d8;
+    
     width: 50%;
     height: 1px;
 }
@@ -106,10 +107,12 @@ body {
 .boxs_navs {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1000px;
-    width: 100%;
     justify-content: center;
+    gap: 20px;
+    
+    max-width: 600px;
+    width: 100%;
+ 
     margin-top: 20px;
 }
 
@@ -141,7 +144,7 @@ body {
 
 /* Ícones */
 .box i {
-    font-size: 40px;
+    font-size: 3rem;
     margin-bottom: 12px;
 }
 
@@ -160,27 +163,27 @@ body {
 }
 
 /* Cores individuais */
-.box_monitor {
+.box_monitor, .box_sup {
     border-top: 5px solid #007bff;
 }
 
-.box_monitor i {
+.box_monitor i, .box_sup i {
     color: #007bff;
 }
 
-.box_pending {
+.box_tasks, .box_dba {
     border-top: 5px solid #ffc107;
 }
 
-.box_pending i {
+.box_tasks i, .box_dba i {
     color: #ffc107;
 }
 
-.box_info {
+.box_info, .box_redes{
     border-top: 5px solid #28a745;
 }
 
-.box_info i {
+.box_info i, .box_redes i {
     color: #28a745;
 }
 
