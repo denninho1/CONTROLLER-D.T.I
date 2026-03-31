@@ -23,16 +23,19 @@
                 <input type="search" name="search_loja" class="search_loja" id="search_loja" placeholder='Digite a loja ou supervisor'>
             </div>
             <div class="filter_container">
-                <button id="filter_lojas" class="filter_btn">Filtrar por <i class="fa-solid fa-caret-down"></i></button>
+                <button id="filter_lojas" class="filter_btn">
+                    Filtrar por <i class="fa-solid fa-caret-down"></i>
+                </button>
+
                 <ul class="filter_list">
-                    <li>Nº Crescente <i class="fa-solid fa-turn-up"></i></li>
-                    <li>Nº Decrescente <i class="fa-solid fa-turn-down"></i></li>
-                    <li>UF - PE</li>
-                    <li>UF - PB</li>
-                    <li>UF - RN</li>
-                    <li>UF - AL</li>
-                    <li>UF - CE</li>
-                    <li>UF - BA</li>
+                    <li data-filter="asc">Nº Crescente</li>
+                    <li data-filter="desc">Nº Decrescente</li>
+                    <li data-filter="PE">UF - PE</li>
+                    <li data-filter="PB">UF - PB</li>
+                    <li data-filter="RN">UF - RN</li>
+                    <li data-filter="AL">UF - AL</li>
+                    <li data-filter="CE">UF - CE</li>
+                    <li data-filter="BA">UF - BA</li>
                 </ul>
             </div>
         </div>
@@ -75,5 +78,7 @@
             </table>
         </div>
     </section>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>

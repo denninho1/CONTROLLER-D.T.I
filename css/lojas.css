@@ -51,6 +51,7 @@
 }
 
 .filter_list {
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -69,6 +70,10 @@
 
 .filter_list li:hover {
     background-color: #b0b0b0;
+}
+
+.filter_container.active .filter_list {
+    display: block;
 }
 
 
