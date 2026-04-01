@@ -1,4 +1,4 @@
-// Validando se há token
+/* // Validando se há token
 const token = localStorage.getItem('token');
 
 if (!token) {
@@ -27,7 +27,7 @@ btnToggleNavbar.addEventListener('click', () => {
 //Abrir e fechar navbar
 function toggleNavbar() {
     navbar.classList.toggle('active');
-}
+} */
 
 
 /* Eventos para o botão de filtrar */
