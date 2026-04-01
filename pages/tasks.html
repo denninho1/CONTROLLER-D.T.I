@@ -9,8 +9,31 @@
 </head>
 <body>
     <header class="header">
-        <div class="left"><a href="./main.html">Controller D.T.I</a></div>
-        <div class="right"><i class="fa-solid fa-user"></i></div>
+        <div class="left"><a href="/pages/main.html">Controller D.T.I</a></div>
+        <div class="right content_user open_sidebar">
+            <i class="fa-solid fa-user"></i>
+            <span class="user_logged">Vinnicius</span>
+        </div>
+
+        <div class="header_sidebar">
+            <div class="navbar_top">
+                <i class="fa-solid fa-xmark close_sidebar"></i>
+                <div class="content_user">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="user_logged">Vinnicius</span>
+                </div>
+            </div>
+
+            <ul class="header_navlist">
+                <li><a href="/pages/main.html">Página Principal</a></li>
+                <li><a href="/pages/admin.html">Painel Admin</a></li>
+            </ul>
+
+            <div class="logoff" id="btn_logoff">
+                <span>Sair</span>
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+        </div>
     </header>
 
     <section class="main">

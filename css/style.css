@@ -119,6 +119,7 @@ body {
     padding: 10px 15px;
     font-size: 1.5rem;
     color: #333;
+    font-weight: 500;
     transition: all .3s linear;
 }
 
