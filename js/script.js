@@ -1,4 +1,4 @@
-/* // Validando se há token
+// Validando se há token
 const token = localStorage.getItem('token');
 
 if (!token) {
@@ -18,16 +18,7 @@ const userData = parseJwt(token);
 document.getElementById("user_logged").textContent = userData.usuario;
 
 //Abrir navbar
-const btnToggleNavbar = document.querySelector('.content_user');
-const navbar = document.querySelector('.navbar');
 
-btnToggleNavbar.addEventListener('click', () => {
-    toggleNavbar()
-});
-//Abrir e fechar navbar
-function toggleNavbar() {
-    navbar.classList.toggle('active');
-} */
 
 
 /* Eventos para o botão de filtrar */
