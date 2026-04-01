@@ -57,7 +57,7 @@ body {
     color: #333;
 }
 
-.header .content_user .open_navbar {
+.header .open_sidebar {
     cursor: pointer;
 }
 
@@ -98,14 +98,14 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
-.header_sidebar .navbar_top .close_navbar {
+.header_sidebar .navbar_top .close_sidebar {
     cursor: pointer;
     font-size: 1.5rem;
     padding: 5px;
     transition: all .2s linear;
 }
 
-.header_sidebar .navbar_top .close_navbar:hover {
+.header_sidebar .navbar_top .close_sidebar:hover {
     color: #b0b0b0;
 }
 

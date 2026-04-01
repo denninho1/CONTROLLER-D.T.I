@@ -1,10 +1,9 @@
-// Validando se há token
+/* // Validando se há token
 const token = localStorage.getItem('token');
 
 if (!token) {
     window.location.href = 'login.html'
 }
-
 
 //Guardar nome de usuario e exibir no header
 function parseJwt(token) {
@@ -15,34 +14,28 @@ function parseJwt(token) {
 
 const userData = parseJwt(token);
 
-document.getElementById("user_logged").textContent = userData.usuario;
+document.getElementById("user_logged").textContent = userData.usuario; */
 
-//Abrir navbar
+/* ABRIR SIDE BAR */
+const sidebar = document.querySelector('.header_sidebar');
+const btnOpenSidebar = document.querySelector('.open_sidebar');
+const btnCloseSidebar = document.querySelector('.close_sidebar');
 
-
-
-/* Eventos para o botão de filtrar */
-const filterContainer = document.querySelector('.filter_container');
-const filterBtn = document.querySelector('.filter_btn');
-const arrowIcon = filterBtn.querySelector('i');
-
-filterBtn.addEventListener('click', (e) => {
+btnOpenSidebar.addEventListener('click', (e) => {
     e.stopPropagation();
-
-    filterContainer.classList.toggle('active');
-
-    arrowIcon.classList.toggle('fa-caret-down');
-    arrowIcon.classList.toggle('fa-caret-up');
+    sidebar.classList.add('active');
 });
 
-document.addEventListener('click', () => {
-    filterContainer.classList.remove('active')
-
-    arrowIcon.classList.remove('fa-caret-up');
-    arrowIcon.classList.add('fa-caret-down');
-
-})
-
-filterContainer.addEventListener('click', (e) => {
+btnCloseSidebar.addEventListener('click', (e) => {
     e.stopPropagation();
-})
+    sidebar.classList.remove('active');
+});
+
+document.addEventListener('click', (e) => {
+   if (sidebar.classList.contains('active') && !sidebar.contains(e.target)) {
+        sidebar.classList.remove('active');
+    } 
+});
+
+
+
