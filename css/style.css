@@ -262,38 +262,98 @@ body {
 
 /* ----- TABELAS ----- */
 .table_wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    width: 100%;
-    font-size: 1.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
 }
 
-thead tr {
-    background-color: #000;
-    color: #fff;
+/* TABELA */
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
+
+/* CABEÇALHO */
 thead th {
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: .5px .5px 3px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-tbody tr{
-    cursor: pointer;
-    background-color: #f1f1f1;
-    transition: .3s all linear;
+/* LINHAS */
+tbody tr {
+  transition: all 0.2s ease;
 }
 
-tbody td {
-    padding: 10px 20px;
-    text-align: center;
-    border: 1px solid #000;
-    border-radius: 5px;
-    font-weight: 500;
-    box-shadow: .5px .5px 3px rgba(0, 0, 0, 0.5);
+/* HOVER */
+tbody tr:hover {
+  background: #f9fafb;
 }
 
+/* CÉLULAS */
+td {
+  padding: 16px 14px;
+  font-size: 14px;
+  color: #111827;
+  font-weight: 500;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* BADGE FILIAL */
+td:first-child {
+  font-weight: 600;
+}
+
+td:first-child::before {
+  content: "";
+}
+
+/* BADGE VISUAL */
+td:nth-child(1) {
+  width: 80px;
+}
+
+td:nth-child(1) span {
+  background: #e0ecff;
+  color: #2563eb;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* CONTATO COM ÍCONE (opcional se quiser usar depois) */
+td:nth-child(2) {
+  color: #374151;
+}
+
+/* TEXTO SECUNDÁRIO */
+td:nth-child(5),
+td:nth-child(7) {
+  color: #6b7280;
+}
+
+/* ARREDONDAR PRIMEIRA E ULTIMA LINHA */
+tbody tr:first-child td:first-child {
+  border-top-left-radius: 12px;
+}
+
+tbody tr:first-child td:last-child {
+  border-top-right-radius: 12px;
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
 tbody tr:hover {
     transform: scale(1.03);
 }
@@ -338,17 +398,20 @@ tbody tr:hover {
     font-weight: 600;
     font-size: 1.5rem;
     
+    background: #3b82f6;
     height: 40px;
-    padding: 20px 25px;
-    
-    border: 1px solid #000;
-    background-color: #d5d5d5;
+    padding: 10px 16px;
+
     
     cursor: pointer;
+
+    color: #fff;
+    border-radius: 8px;
+    transition: 0.2s;
 }
 
 .filter_btn:hover {
-    background-color: #b0b0b0;
+    background: #2563eb;
 }
 
 .filter_list {
